@@ -1,0 +1,130 @@
+@import "config";
+@import "fonts.scss";
+
+:root {
+	font-size: 14px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+}
+
+body {
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-family: $font-stack;
+	font-weight: 400;
+	line-height: 1.74;
+	color: $primary-color;
+}
+
+.container {
+	background: linear-gradient(170deg, #180cab 0%, #010113 100%);
+	position: relative;
+}
+
+section.hero-section {
+	max-width: 85.72rem;
+	margin: auto;
+	padding: 4.64rem 0 16.72rem 0;
+
+	.top-text {
+		margin: 0 14.29rem;
+		padding: 0.36rem 0;
+		background-image: linear-gradient(140deg, #f39c12 0%, #dd6b00 100%);
+		border-radius: 0.36rem 2.143rem;
+
+		p {
+			text-align: center;
+			font-size: 1.57rem;
+		}
+	}
+
+	.main-text {
+		font-size: 3.36rem;
+		font-weight: 700;
+		line-height: 1.1em;
+		letter-spacing: -0.6px;
+		margin-top: 2.36rem;
+		margin-bottom: 10px;
+		text-align: center;
+
+		.normal-font-weight {
+			font-weight: 400;
+		}
+
+		.text-underline {
+			text-decoration: underline;
+		}
+
+		.yellow-text {
+			color: #ffcc00;
+		}
+	}
+
+	.hero-bottom-shape {
+		position: absolute;
+		width: 100%;
+		bottom: -1px;
+		transform: rotate(180deg);
+		left: 0;
+		overflow: hidden;
+
+		svg {
+			position: relative;
+			height: 335px;
+			left: 50%;
+			transform: translateX(-50%) rotateY(180deg);
+			width: calc(100% + 1.3px);
+
+			path {
+				fill: #ffffff;
+			}
+		}
+	}
+}
+
+.video-section {
+	max-width: 85.72rem;
+	@include light-gray-color($secondary-color);
+	margin: auto;
+	padding: 0 15px 40px 15px;
+
+	.info {
+		text-align: center;
+		font-size: $secondary-font-size;
+		font-weight: bolder;
+		margin: 0 190px;
+		padding-bottom: 21px;
+
+		.red-text {
+			color: $red-color;
+		}
+	}
+
+	.video {
+		margin: 0 140px;
+		width: 890px;
+		height: 500.626px;
+		border: 2px #333 dashed;
+		position: relative;
+
+		.video-info {
+			font-family: "Raleway", "Gilroy", sans-serif;
+			font-weight: 500;
+			font-style: italic;
+			font-size: $primary-font-size;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	p.info:nth-of-type(2) {
+		font-size: 25px;
+		margin: 31px 0 0 0;
+		width: 98%;
+	}
+}

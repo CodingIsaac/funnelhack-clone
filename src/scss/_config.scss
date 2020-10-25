@@ -1,0 +1,34 @@
+$font-stack: Gilroy, "Raleway", sans-serif;
+$primary-color: #fff;
+$secondary-color: #333;
+$yellow-color: #f39c12;
+$red-color: #f00;
+
+$primary-background: #0f0a5b;
+
+$primary-font-size: 17px;
+$secondary-font-size: 22px;
+
+// Set text color based on bg
+@function set-text-color($color) {
+	@if (lightness($color) > 60) {
+		@return $secondary-color;
+	}
+	@return $primary-color;
+}
+
+// Set background & text color
+@mixin set-background($color) {
+	background-color: $color;
+	color: set-text-color($color);
+}
+
+// Lighten primary-background
+@mixin light-blue-background($color) {
+	background-color: lighten($color: $color, $amount: 30%);
+}
+
+// Lighten secondary-color
+@mixin light-gray-color($color) {
+	color: lighten($color: $color, $amount: 21%);
+}
